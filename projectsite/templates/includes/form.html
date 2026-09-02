@@ -13,11 +13,15 @@
     <label>{{ field.label_tag }}</label>
 
     <div class="form-group">
-        {% render_field field class="form-control" %}
+        {% if field.errors %}
+            {% render_field field class="form-control is-invalid" %}
+        {% else %}
+            {% render_field field class="form-control" %}
+        {% endif %}
     </div>
 
     {% for error in field.errors %}
-    <div class="invalid-feedback">
+    <div class="invalid-feedback d-block">
         {{ error }}
     </div>
     {% endfor %}
