@@ -10,7 +10,6 @@ __pycache__/
 venv/
 .venv/
 env/
-*.sqlite3
 
 # Root dashboard boilerplate files
 LICENSE
