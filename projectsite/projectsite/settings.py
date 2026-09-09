@@ -167,17 +167,12 @@ ACCOUNT_SIGNUP_FIELDS = [
 
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
-        'APP': {
-            'client_id': os.environ.get('GOOGLE_CLIENT_ID', 'YOUR_GOOGLE_CLIENT_ID'),
-            'secret': os.environ.get('GOOGLE_CLIENT_SECRET', 'YOUR_GOOGLE_CLIENT_SECRET'),
-            'key': ''
-        }
-    },
-    'github': {
-        'APP': {
-            'client_id': os.environ.get('GITHUB_CLIENT_ID', 'YOUR_GITHUB_CLIENT_ID'),
-            'secret': os.environ.get('GITHUB_CLIENT_SECRET', 'YOUR_GITHUB_CLIENT_SECRET'),
-            'key': ''
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
         }
     }
 }
