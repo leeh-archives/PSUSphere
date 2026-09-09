@@ -130,5 +130,30 @@
    </div>
  </div>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
+ <script>
+   document.addEventListener("DOMContentLoaded", function () {
+     const tabLogin = document.getElementById("tab-login");
+     const tabRegister = document.getElementById("tab-register");
+     const paneLogin = document.getElementById("pills-login");
+     const paneRegister = document.getElementById("pills-register");
+
+     if (tabLogin && tabRegister) {
+       tabLogin.addEventListener("click", function (e) {
+         e.preventDefault();
+         tabLogin.classList.add("active");
+         tabRegister.classList.remove("active");
+         paneLogin.classList.add("show", "active");
+         paneRegister.classList.remove("show", "active");
+       });
+       tabRegister.addEventListener("click", function (e) {
+         e.preventDefault();
+         tabRegister.classList.add("active");
+         tabLogin.classList.remove("active");
+         paneRegister.classList.add("show", "active");
+         paneLogin.classList.remove("show", "active");
+       });
+     }
+   });
+ </script>
  </body>
 </html>
