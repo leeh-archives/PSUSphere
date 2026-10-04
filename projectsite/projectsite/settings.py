@@ -48,10 +48,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
 ]
 
-if "pythonanywhere" in socket.gethostname():
-    SITE_ID = 2
-else:
-    SITE_ID = 1
+SITE_ID = 1
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
@@ -175,6 +172,18 @@ SOCIALACCOUNT_PROVIDERS = {
         ],
         'AUTH_PARAMS': {
             'access_type': 'online',
+        },
+        'APP': {
+            'client_id': os.environ.get('GOOGLE_CLIENT_ID', 'placeholder-google-client-id'),
+            'secret': os.environ.get('GOOGLE_CLIENT_SECRET', 'placeholder-google-secret'),
+            'key': ''
+        }
+    },
+    'github': {
+        'APP': {
+            'client_id': os.environ.get('GITHUB_CLIENT_ID', 'placeholder-github-client-id'),
+            'secret': os.environ.get('GITHUB_CLIENT_SECRET', 'placeholder-github-secret'),
+            'key': ''
         }
     }
 }
