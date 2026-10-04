@@ -1,0 +1,484 @@
+[
+  {
+    "model": "studentorg.college",
+    "pk": 1,
+    "fields": {
+      "college_name": "College of Humanities",
+      "created_at": "2026-09-02 18:43:51.787457",
+      "updated_at": "2026-09-02 18:43:51.787457"
+    }
+  },
+  {
+    "model": "studentorg.college",
+    "pk": 2,
+    "fields": {
+      "college_name": "College of Sciences",
+      "created_at": "2026-09-02 18:43:51.797742",
+      "updated_at": "2026-09-02 18:43:51.797742"
+    }
+  },
+  {
+    "model": "studentorg.college",
+    "pk": 3,
+    "fields": {
+      "college_name": "College of Engineering",
+      "created_at": "2026-09-02 18:43:51.802576",
+      "updated_at": "2026-09-02 18:43:51.802576"
+    }
+  },
+  {
+    "model": "studentorg.college",
+    "pk": 4,
+    "fields": {
+      "college_name": "College of Business",
+      "created_at": "2026-09-02 18:53:11.970123",
+      "updated_at": "2026-09-02 18:53:11.970123"
+    }
+  },
+  {
+    "model": "studentorg.college",
+    "pk": 5,
+    "fields": {
+      "college_name": "College of Education",
+      "created_at": "2026-09-02 18:53:11.970123",
+      "updated_at": "2026-09-02 18:53:11.970123"
+    }
+  },
+  {
+    "model": "studentorg.program",
+    "pk": 1,
+    "fields": {
+      "prog_name": "BS Information Technology",
+      "college": 3,
+      "created_at": "2026-09-02 18:43:51.802576",
+      "updated_at": "2026-09-02 18:50:01.671070"
+    }
+  },
+  {
+    "model": "studentorg.program",
+    "pk": 2,
+    "fields": {
+      "prog_name": "BS Computer Science",
+      "college": 2,
+      "created_at": "2026-09-02 18:43:51.817248",
+      "updated_at": "2026-09-02 18:43:51.817248"
+    }
+  },
+  {
+    "model": "studentorg.program",
+    "pk": 3,
+    "fields": {
+      "prog_name": "BA Communication",
+      "college": 1,
+      "created_at": "2026-09-02 18:43:51.819538",
+      "updated_at": "2026-09-02 18:43:51.819538"
+    }
+  },
+  {
+    "model": "studentorg.program",
+    "pk": 4,
+    "fields": {
+      "prog_name": "BS Accountancy",
+      "college": 4,
+      "created_at": "2026-09-02 18:53:12.019972",
+      "updated_at": "2026-09-02 18:53:12.019972"
+    }
+  },
+  {
+    "model": "studentorg.program",
+    "pk": 5,
+    "fields": {
+      "prog_name": "BS Education",
+      "college": 5,
+      "created_at": "2026-09-02 18:53:12.019972",
+      "updated_at": "2026-09-02 18:53:12.019972"
+    }
+  },
+  {
+    "model": "studentorg.organization",
+    "pk": 1,
+    "fields": {
+      "name": "Final Home",
+      "college": 1,
+      "description": "Great fact affect mission.",
+      "created_at": "2026-09-02 18:43:51.828761",
+      "updated_at": "2026-09-02 18:43:51.828761"
+    }
+  },
+  {
+    "model": "studentorg.organization",
+    "pk": 2,
+    "fields": {
+      "name": "Defense Traditional",
+      "college": 2,
+      "description": "Voice school old carry drop Congress.",
+      "created_at": "2026-09-02 18:43:51.835984",
+      "updated_at": "2026-09-02 18:43:51.835984"
+    }
+  },
+  {
+    "model": "studentorg.organization",
+    "pk": 3,
+    "fields": {
+      "name": "Stuff House",
+      "college": 2,
+      "description": "Politics economy public run skill.",
+      "created_at": "2026-09-02 18:43:51.835984",
+      "updated_at": "2026-09-02 18:43:51.835984"
+    }
+  },
+  {
+    "model": "studentorg.organization",
+    "pk": 4,
+    "fields": {
+      "name": "Remain Firm",
+      "college": 1,
+      "description": "Practice trip thank large this test camera such.",
+      "created_at": "2026-09-02 18:43:51.847460",
+      "updated_at": "2026-09-02 18:43:51.847460"
+    }
+  },
+  {
+    "model": "studentorg.organization",
+    "pk": 5,
+    "fields": {
+      "name": "Ever Effect",
+      "college": 2,
+      "description": "Plant after enter white health economy sit.",
+      "created_at": "2026-09-02 18:43:51.852737",
+      "updated_at": "2026-09-02 18:43:51.852737"
+    }
+  },
+  {
+    "model": "studentorg.organization",
+    "pk": 6,
+    "fields": {
+      "name": "Alpha Society",
+      "college": 3,
+      "description": "Engineering and technology innovation club.",
+      "created_at": "2026-09-02 18:53:11.986656",
+      "updated_at": "2026-09-02 18:53:11.986656"
+    }
+  },
+  {
+    "model": "studentorg.organization",
+    "pk": 7,
+    "fields": {
+      "name": "Beta Guild",
+      "college": 4,
+      "description": "Business and entrepreneurship society.",
+      "created_at": "2026-09-02 18:53:11.986656",
+      "updated_at": "2026-09-02 18:53:11.986656"
+    }
+  },
+  {
+    "model": "studentorg.organization",
+    "pk": 8,
+    "fields": {
+      "name": "Gamma League",
+      "college": 5,
+      "description": "Educational leadership and mentorship.",
+      "created_at": "2026-09-02 18:53:12.004292",
+      "updated_at": "2026-09-02 18:53:12.004292"
+    }
+  },
+  {
+    "model": "studentorg.organization",
+    "pk": 9,
+    "fields": {
+      "name": "Delta Union",
+      "college": 1,
+      "description": "Arts, culture, and social development.",
+      "created_at": "2026-09-02 18:53:12.009193",
+      "updated_at": "2026-09-02 18:53:12.009193"
+    }
+  },
+  {
+    "model": "studentorg.organization",
+    "pk": 10,
+    "fields": {
+      "name": "Epsilon Club",
+      "college": 2,
+      "description": "Scientific research and discovery guild.",
+      "created_at": "2026-09-02 18:53:12.019972",
+      "updated_at": "2026-09-02 18:53:12.019972"
+    }
+  },
+  {
+    "model": "studentorg.student",
+    "pk": 1,
+    "fields": {
+      "student_id": "2024-08-0127",
+      "lastname": "Dela Cruz",
+      "firstname": "Juan",
+      "middlename": "Reyes",
+      "program": 1,
+      "created_at": "2026-09-02 18:43:51.852737",
+      "updated_at": "2026-09-02 18:50:16.639582"
+    }
+  },
+  {
+    "model": "studentorg.student",
+    "pk": 2,
+    "fields": {
+      "student_id": "2024-02-0123",
+      "lastname": "Santos",
+      "firstname": "Maria",
+      "middlename": "Clara",
+      "program": 2,
+      "created_at": "2026-09-02 18:43:51.865112",
+      "updated_at": "2026-09-02 18:50:29.731498"
+    }
+  },
+  {
+    "model": "studentorg.student",
+    "pk": 3,
+    "fields": {
+      "student_id": "2024-0001",
+      "lastname": "Dela Cruz",
+      "firstname": "Juan",
+      "middlename": "Reyes",
+      "program": 1,
+      "created_at": "2026-09-02 18:53:12.036888",
+      "updated_at": "2026-09-02 18:53:12.036888"
+    }
+  },
+  {
+    "model": "studentorg.student",
+    "pk": 4,
+    "fields": {
+      "student_id": "2024-0002",
+      "lastname": "Santos",
+      "firstname": "Maria",
+      "middlename": "Clara",
+      "program": 1,
+      "created_at": "2026-09-02 18:53:12.036888",
+      "updated_at": "2026-09-02 18:53:12.036888"
+    }
+  },
+  {
+    "model": "studentorg.student",
+    "pk": 5,
+    "fields": {
+      "student_id": "2024-0003",
+      "lastname": "Reyes",
+      "firstname": "Pedro",
+      "middlename": "Alvarez",
+      "program": 1,
+      "created_at": "2026-09-02 18:53:12.053434",
+      "updated_at": "2026-09-02 18:53:12.053434"
+    }
+  },
+  {
+    "model": "studentorg.student",
+    "pk": 6,
+    "fields": {
+      "student_id": "2024-0004",
+      "lastname": "Gonzales",
+      "firstname": "Ana",
+      "middlename": "Belen",
+      "program": 1,
+      "created_at": "2026-09-02 18:53:12.053434",
+      "updated_at": "2026-09-02 18:53:12.053434"
+    }
+  },
+  {
+    "model": "studentorg.student",
+    "pk": 7,
+    "fields": {
+      "student_id": "2024-0005",
+      "lastname": "Ramos",
+      "firstname": "Jose",
+      "middlename": "Protasio",
+      "program": 1,
+      "created_at": "2026-09-02 18:53:12.053434",
+      "updated_at": "2026-09-02 18:53:12.053434"
+    }
+  },
+  {
+    "model": "studentorg.student",
+    "pk": 8,
+    "fields": {
+      "student_id": "2024-0006",
+      "lastname": "Mendoza",
+      "firstname": "Liza",
+      "middlename": "Soberano",
+      "program": 1,
+      "created_at": "2026-09-02 18:53:12.069421",
+      "updated_at": "2026-09-02 18:53:12.069421"
+    }
+  },
+  {
+    "model": "studentorg.student",
+    "pk": 9,
+    "fields": {
+      "student_id": "2024-0007",
+      "lastname": "Garcia",
+      "firstname": "Emilio",
+      "middlename": "Aguinaldo",
+      "program": 1,
+      "created_at": "2026-09-02 18:53:12.069421",
+      "updated_at": "2026-09-02 18:53:12.069421"
+    }
+  },
+  {
+    "model": "studentorg.student",
+    "pk": 10,
+    "fields": {
+      "student_id": "2024-0008",
+      "lastname": "Torres",
+      "firstname": "Apolinario",
+      "middlename": "Mabini",
+      "program": 1,
+      "created_at": "2026-09-02 18:53:12.086276",
+      "updated_at": "2026-09-02 18:53:12.086276"
+    }
+  },
+  {
+    "model": "studentorg.student",
+    "pk": 11,
+    "fields": {
+      "student_id": "2024-0009",
+      "lastname": "Aquino",
+      "firstname": "Melchora",
+      "middlename": "Silang",
+      "program": 1,
+      "created_at": "2026-09-02 18:53:12.086998",
+      "updated_at": "2026-09-02 18:53:12.086998"
+    }
+  },
+  {
+    "model": "studentorg.student",
+    "pk": 12,
+    "fields": {
+      "student_id": "2024-0010",
+      "lastname": "Bautista",
+      "firstname": "Andres",
+      "middlename": "Bonifacio",
+      "program": 1,
+      "created_at": "2026-09-02 18:53:12.086998",
+      "updated_at": "2026-09-02 18:53:12.086998"
+    }
+  },
+  {
+    "model": "studentorg.orgmember",
+    "pk": 1,
+    "fields": {
+      "student": 1,
+      "organization": 1,
+      "date_joined": "2024-01-15",
+      "created_at": "2026-09-02 18:43:51.869149",
+      "updated_at": "2026-09-02 18:43:51.869149"
+    }
+  },
+  {
+    "model": "studentorg.orgmember",
+    "pk": 2,
+    "fields": {
+      "student": 2,
+      "organization": 2,
+      "date_joined": "2024-02-20",
+      "created_at": "2026-09-02 18:43:51.869149",
+      "updated_at": "2026-09-02 18:43:51.869149"
+    }
+  },
+  {
+    "model": "studentorg.orgmember",
+    "pk": 3,
+    "fields": {
+      "student": 2,
+      "organization": 2,
+      "date_joined": "2024-01-15",
+      "created_at": "2026-09-02 18:53:12.108361",
+      "updated_at": "2026-09-02 18:53:12.108361"
+    }
+  },
+  {
+    "model": "studentorg.orgmember",
+    "pk": 4,
+    "fields": {
+      "student": 3,
+      "organization": 3,
+      "date_joined": "2024-01-15",
+      "created_at": "2026-09-02 18:53:12.108361",
+      "updated_at": "2026-09-02 18:53:12.108361"
+    }
+  },
+  {
+    "model": "studentorg.orgmember",
+    "pk": 5,
+    "fields": {
+      "student": 4,
+      "organization": 4,
+      "date_joined": "2024-01-15",
+      "created_at": "2026-09-02 18:53:12.120489",
+      "updated_at": "2026-09-02 18:53:12.120489"
+    }
+  },
+  {
+    "model": "studentorg.orgmember",
+    "pk": 6,
+    "fields": {
+      "student": 5,
+      "organization": 5,
+      "date_joined": "2024-01-15",
+      "created_at": "2026-09-02 18:53:12.120489",
+      "updated_at": "2026-09-02 18:53:12.120489"
+    }
+  },
+  {
+    "model": "studentorg.orgmember",
+    "pk": 7,
+    "fields": {
+      "student": 6,
+      "organization": 6,
+      "date_joined": "2024-01-15",
+      "created_at": "2026-09-02 18:53:12.120489",
+      "updated_at": "2026-09-02 18:53:12.120489"
+    }
+  },
+  {
+    "model": "studentorg.orgmember",
+    "pk": 8,
+    "fields": {
+      "student": 7,
+      "organization": 7,
+      "date_joined": "2024-01-15",
+      "created_at": "2026-09-02 18:53:12.136329",
+      "updated_at": "2026-09-02 18:53:12.136329"
+    }
+  },
+  {
+    "model": "studentorg.orgmember",
+    "pk": 9,
+    "fields": {
+      "student": 8,
+      "organization": 8,
+      "date_joined": "2024-01-15",
+      "created_at": "2026-09-02 18:53:12.136329",
+      "updated_at": "2026-09-02 18:53:12.136329"
+    }
+  },
+  {
+    "model": "studentorg.orgmember",
+    "pk": 10,
+    "fields": {
+      "student": 9,
+      "organization": 9,
+      "date_joined": "2024-01-15",
+      "created_at": "2026-09-02 18:53:12.145431",
+      "updated_at": "2026-09-02 18:53:12.151917"
+    }
+  },
+  {
+    "model": "studentorg.orgmember",
+    "pk": 11,
+    "fields": {
+      "student": 10,
+      "organization": 10,
+      "date_joined": "2024-01-15",
+      "created_at": "2026-09-02 18:53:12.156540",
+      "updated_at": "2026-09-02 18:53:12.156540"
+    }
+  }
+]
