@@ -10,10 +10,10 @@
             <div class="card-category">Page Subtitle</div> 
           </div> 
           <br /> 
-          <div class="col-md-12 row"> 
-            <div class="col-md-6"> 
-              <form class="navbar-left navbar-form nav-search mr-md-3" action="" method="get"> 
-                <div class="input-group"> 
+          <div class="col-md-12 row align-items-center"> 
+            <div class="col-md-9"> 
+              <form class="navbar-left navbar-form nav-search mr-md-3 d-flex align-items-center flex-wrap" action="" method="get"> 
+                <div class="input-group mr-3 mb-2 mb-md-0" style="width: auto; max-width: 250px;"> 
                   <input type="text" name="q" value="{{ request.GET.q }}" placeholder="Search ..." class="form-control" /> 
                   <div class="input-group-append"> 
                     <span class="input-group-text"> 
@@ -21,9 +21,22 @@
                     </span> 
                   </div> 
                 </div> 
+                <div class="form-group p-0 mb-0"> 
+                  <select name="sort_by" class="form-control" onchange="this.form.submit()"> 
+                    <option value="">Sort By...</option> 
+                    <option value="lastname_asc" {% if request.GET.sort_by == 'lastname_asc' %}selected{% endif %}>Student Last Name (A-Z)</option> 
+                    <option value="lastname_desc" {% if request.GET.sort_by == 'lastname_desc' %}selected{% endif %}>Student Last Name (Z-A)</option> 
+                    <option value="firstname_asc" {% if request.GET.sort_by == 'firstname_asc' %}selected{% endif %}>Student First Name (A-Z)</option> 
+                    <option value="firstname_desc" {% if request.GET.sort_by == 'firstname_desc' %}selected{% endif %}>Student First Name (Z-A)</option> 
+                    <option value="id_asc" {% if request.GET.sort_by == 'id_asc' %}selected{% endif %}>Student ID (Ascending)</option> 
+                    <option value="id_desc" {% if request.GET.sort_by == 'id_desc' %}selected{% endif %}>Student ID (Descending)</option> 
+                    <option value="program_asc" {% if request.GET.sort_by == 'program_asc' %}selected{% endif %}>Program (A-Z)</option> 
+                    <option value="program_desc" {% if request.GET.sort_by == 'program_desc' %}selected{% endif %}>Program (Z-A)</option> 
+                  </select> 
+                </div> 
               </form> 
             </div> 
-            <div class="col-md-6"> 
+            <div class="col-md-3"> 
               <div class="pull-right"> 
                 <a href="{% url 'student-add' %}" class="btn btn-success btn-rounded">Add Student</a> 
               </div> 

@@ -50,6 +50,15 @@ class OrganizationList(LoginRequiredMixin, ListView):
                 Q(description__icontains=query) |
                 Q(college__college_name__icontains=query)
             )
+        sort_by = self.request.GET.get('sort_by')
+        if sort_by == 'name_asc':
+            qs = qs.order_by('name')
+        elif sort_by == 'name_desc':
+            qs = qs.order_by('-name')
+        elif sort_by == 'college_asc':
+            qs = qs.order_by('college__college_name')
+        elif sort_by == 'college_desc':
+            qs = qs.order_by('-college__college_name')
         return qs
 
 
@@ -96,6 +105,15 @@ class OrgMemberList(LoginRequiredMixin, ListView):
                 Q(student__lastname__icontains=query) |
                 Q(organization__name__icontains=query)
             )
+        sort_by = self.request.GET.get('sort_by')
+        if sort_by == 'lastname_asc':
+            qs = qs.order_by('student__lastname')
+        elif sort_by == 'lastname_desc':
+            qs = qs.order_by('-student__lastname')
+        elif sort_by == 'date_asc':
+            qs = qs.order_by('date_joined')
+        elif sort_by == 'date_desc':
+            qs = qs.order_by('-date_joined')
         return qs
 
 
@@ -136,6 +154,23 @@ class StudentList(LoginRequiredMixin, ListView):
                 Q(lastname__icontains=query) |
                 Q(program__prog_name__icontains=query)
             )
+        sort_by = self.request.GET.get('sort_by')
+        if sort_by == 'lastname_asc':
+            qs = qs.order_by('lastname')
+        elif sort_by == 'lastname_desc':
+            qs = qs.order_by('-lastname')
+        elif sort_by == 'firstname_asc':
+            qs = qs.order_by('firstname')
+        elif sort_by == 'firstname_desc':
+            qs = qs.order_by('-firstname')
+        elif sort_by == 'id_asc':
+            qs = qs.order_by('student_id')
+        elif sort_by == 'id_desc':
+            qs = qs.order_by('-student_id')
+        elif sort_by == 'program_asc':
+            qs = qs.order_by('program__prog_name')
+        elif sort_by == 'program_desc':
+            qs = qs.order_by('-program__prog_name')
         return qs
 
 
@@ -171,6 +206,15 @@ class CollegeList(LoginRequiredMixin, ListView):
         query = self.request.GET.get('q')
         if query:
             qs = qs.filter(college_name__icontains=query)
+        sort_by = self.request.GET.get('sort_by')
+        if sort_by == 'name_asc':
+            qs = qs.order_by('college_name')
+        elif sort_by == 'name_desc':
+            qs = qs.order_by('-college_name')
+        elif sort_by == 'created_asc':
+            qs = qs.order_by('created_at')
+        elif sort_by == 'created_desc':
+            qs = qs.order_by('-created_at')
         return qs
 
 
@@ -216,6 +260,15 @@ class ProgramList(LoginRequiredMixin, ListView):
                 Q(prog_name__icontains=query) |
                 Q(college__college_name__icontains=query)
             )
+        sort_by = self.request.GET.get('sort_by')
+        if sort_by == 'name_asc':
+            qs = qs.order_by('prog_name')
+        elif sort_by == 'name_desc':
+            qs = qs.order_by('-prog_name')
+        elif sort_by == 'college_asc':
+            qs = qs.order_by('college__college_name')
+        elif sort_by == 'college_desc':
+            qs = qs.order_by('-college__college_name')
         return qs
 
 

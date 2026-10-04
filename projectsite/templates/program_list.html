@@ -10,10 +10,10 @@
             <div class="card-category">Page Subtitle</div> 
           </div> 
           <br /> 
-          <div class="col-md-12 row"> 
-            <div class="col-md-6"> 
-              <form class="navbar-left navbar-form nav-search mr-md-3" action="" method="get"> 
-                <div class="input-group"> 
+          <div class="col-md-12 row align-items-center"> 
+            <div class="col-md-8"> 
+              <form class="navbar-left navbar-form nav-search mr-md-3 d-flex align-items-center flex-wrap" action="" method="get"> 
+                <div class="input-group mr-3 mb-2 mb-md-0" style="width: auto; max-width: 250px;"> 
                   <input type="text" name="q" value="{{ request.GET.q }}" placeholder="Search ..." class="form-control" /> 
                   <div class="input-group-append"> 
                     <span class="input-group-text"> 
@@ -21,9 +21,18 @@
                     </span> 
                   </div> 
                 </div> 
+                <div class="form-group p-0 mb-0"> 
+                  <select name="sort_by" class="form-control" onchange="this.form.submit()"> 
+                    <option value="">Sort By...</option> 
+                    <option value="name_asc" {% if request.GET.sort_by == 'name_asc' %}selected{% endif %}>Program Name (A-Z)</option> 
+                    <option value="name_desc" {% if request.GET.sort_by == 'name_desc' %}selected{% endif %}>Program Name (Z-A)</option> 
+                    <option value="college_asc" {% if request.GET.sort_by == 'college_asc' %}selected{% endif %}>College (A-Z)</option> 
+                    <option value="college_desc" {% if request.GET.sort_by == 'college_desc' %}selected{% endif %}>College (Z-A)</option> 
+                  </select> 
+                </div> 
               </form> 
             </div> 
-            <div class="col-md-6"> 
+            <div class="col-md-4"> 
               <div class="pull-right"> 
                 <a href="{% url 'program-add' %}" class="btn btn-success btn-rounded">Add Program</a> 
               </div> 
