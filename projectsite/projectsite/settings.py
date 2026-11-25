@@ -201,9 +201,13 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     },
     'github': {
+        'SCOPE': [
+            'user:email',
+            'read:user',
+        ],
         'APP': {
-            'client_id': os.environ.get('GITHUB_CLIENT_ID', 'placeholder-github-client-id'),
-            'secret': os.environ.get('GITHUB_CLIENT_SECRET', 'placeholder-github-secret'),
+            'client_id': os.environ.get('GITHUB_CLIENT_ID', ''),
+            'secret': os.environ.get('GITHUB_CLIENT_SECRET', ''),
             'key': ''
         }
     }
