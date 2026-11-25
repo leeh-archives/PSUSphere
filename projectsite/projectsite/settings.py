@@ -13,14 +13,24 @@ https://docs.djangoproject.com/en/6.1/ref/settings/
 import os
 import socket
 from pathlib import Path
-from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Load environment variables from .env
-load_dotenv(BASE_DIR / '.env')
-load_dotenv(BASE_DIR.parent / '.env')
+# Safe environment loading (works with or without python-dotenv installed)
+try:
+    from dotenv import load_dotenv
+    load_dotenv(BASE_DIR / '.env')
+    load_dotenv(BASE_DIR.parent / '.env')
+except ImportError:
+    for env_path in [BASE_DIR / '.env', BASE_DIR.parent / '.env']:
+        if env_path.exists():
+            with open(env_path, 'r', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith('#') and '=' in line:
+                        k, v = line.split('=', 1)
+                        os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
 
 
 # Quick-start development settings - unsuitable for production
