@@ -13,9 +13,14 @@ https://docs.djangoproject.com/en/6.1/ref/settings/
 import os
 import socket
 from pathlib import Path
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Load environment variables from .env
+load_dotenv(BASE_DIR / '.env')
+load_dotenv(BASE_DIR.parent / '.env')
 
 
 # Quick-start development settings - unsuitable for production
@@ -28,6 +33,9 @@ SECRET_KEY = 'django-insecure-gtii5sqdxj6vvy!k$@ku%q%m7x3j!_bba-@23wg+)bk#eb8(#y
 DEBUG = True
 
 ALLOWED_HOSTS = ['ramaidha.pythonanywhere.com', 'leehvann.pythonanywhere.com', '127.0.0.1', 'localhost', '*']
+
+# Enable HTTPS detection behind reverse proxies (e.g. PythonAnywhere)
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Application definition
 
@@ -46,6 +54,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.github',
     'studentorg',
     'widget_tweaks',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'api',
 ]
 
 SITE_ID = 1
@@ -174,8 +185,8 @@ SOCIALACCOUNT_PROVIDERS = {
             'access_type': 'online',
         },
         'APP': {
-            'client_id': os.environ.get('GOOGLE_CLIENT_ID', 'placeholder-google-client-id'),
-            'secret': os.environ.get('GOOGLE_CLIENT_SECRET', 'placeholder-google-secret'),
+            'client_id': os.environ.get('GOOGLE_CLIENT_ID', ''),
+            'secret': os.environ.get('GOOGLE_CLIENT_SECRET', ''),
             'key': ''
         }
     },
@@ -186,4 +197,14 @@ SOCIALACCOUNT_PROVIDERS = {
             'key': ''
         }
     }
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
 }
